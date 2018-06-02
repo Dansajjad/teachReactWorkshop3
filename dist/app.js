@@ -4,7 +4,6 @@
 	I am using as part of the packages
  */
 
-const { createElement } = React
 const { render } = ReactDOM
 
 const style = {
@@ -15,13 +14,13 @@ const style = {
 	fontWeight: 'bold'
 }
 
-const greeting = createElement(
-	'h1', 
-	{className: 'header', id: 'greeting', style: style},
-	'Hello World'
-)
-
 render(
-	greeting, 
+	<h1 
+		id='greeting'
+		className='header'
+		style={style}>
+	Hello World	
+	</h1>,
+
 	document.getElementById('react-container')
 )
