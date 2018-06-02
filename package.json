@@ -1,0 +1,23 @@
+{
+  "name": "myCodeAlong",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Broadstrokes/teachReactWorkshop.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Broadstrokes/teachReactWorkshop/issues"
+  },
+  "homepage": "https://github.com/Broadstrokes/teachReactWorkshop#readme",
+  "devDependencies": {
+    "httpster": "^1.0.3"
+  }
+}
