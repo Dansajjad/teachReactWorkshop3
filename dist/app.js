@@ -6,19 +6,19 @@
 
 const { render } = ReactDOM
 
-const style = {
-	backgroundColor: 'blue',
-	fontSize: '40px',
-	fontFamily: 'Arial',
-	color: 'white',
-	fontWeight: 'bold'
-}
-
 render(
 	<h1 
 		id='greeting'
 		className='header'
-		style={style}>
+		style={
+			{
+				backgroundColor: 'black',
+				fontSize: '30px',
+				fontFamily: 'Verdana',
+				color: 'white',
+				fontWeight: 'light'
+			} 
+	}>
 	Hello World	
 	</h1>,
 
