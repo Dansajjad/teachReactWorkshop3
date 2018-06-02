@@ -7,9 +7,17 @@
 const { createElement } = React
 const { render } = ReactDOM
 
+const style = {
+	backgroundColor: 'blue',
+	fontSize: '40px',
+	fontFamily: 'Arial',
+	color: 'white',
+	fontWeight: 'bold'
+}
+
 const greeting = createElement(
 	'h1', 
-	{className: 'header', id: 'greeting', style: {backgroundColor:'red', fontSize:'80px'}},
+	{className: 'header', id: 'greeting', style: style},
 	'Hello World'
 )
 
