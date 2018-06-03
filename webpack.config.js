@@ -26,39 +26,65 @@
 const webpack = require('webpack')
 const path = require('path')
 
+// module.exports = {
+//   entry: './src/app',
+//   output: {
+//     path: path.resolve(__dirname, 'dist'),
+//     filename: 'bundle.js',
+//     publicPath: 'dist'
+//   },
+//   devServer: {
+//     inline: true,
+//     contentBase: path.join(__dirname, 'dist'),
+//     port: 9000
+//   },
+//   module: {
+//     // configuration regarding modules
+//     loaders: [
+//       // rules for modules (configure loaders, parser options, etc.)
+//       {
+//         test: /\.js$/,
+//         include: [ path.resolve(__dirname, "src") ],
+//         exclude: [ path.resolve(__dirname, "node_modules") ],
+//         loader: "babel-loader",
+//         options: {
+//           presets: ['react', 'latest', 'stage-0']
+//         }
+//       }
+//     ]
+//   },
+//   devtool: 'source-map',
+//   context: __dirname
+// }
+// 
+
+
+/*
+  Configuration in Workshop
+ */
+
 module.exports = {
-  mode: 'none',
   entry: './src/app',
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: './dist',
     filename: 'bundle.js',
-    publicPath: 'dist'
+    publicPath: '/' //<--- explore this option further 
   },
   devServer: {
-    contentBase: path.join(__dirname, 'dist'),
-    compress: true,
-    hot: true,
+    inline: true,
+    contentBase: './dist',  //<--- explore this option further
     port: 9000
   },
   module: {
-    // configuration regarding modules
-    rules: [
-      // rules for modules (configure loaders, parser options, etc.)
+    loaders: [
       {
-        test: /\.jsx?$/,
-        include: [
-          path.resolve(__dirname, "src")
-        ],
-        exclude: [
-          path.resolve(__dirname, "node_modules")
-        ],
-        loader: "babel-loader",
-        options: {
-          presets: ['react', 'latest', 'stage-0']
+        test: /\.js$/,
+        exclude: /(node_modules)/,
+        loader: ['babel-loader'],
+        query: {
+          presets: ['latest', 'react', 'stage-0']
         }
       }
     ]
-  },
-  devtool: 'source-map',
-  context: __dirname
+  }
 }
