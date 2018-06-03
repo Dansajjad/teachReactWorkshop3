@@ -19,7 +19,7 @@ render(
 				fontWeight: 'light'
 			} 
 	}>
-	Hello World	
+	Hello World
 	</h1>,
 
 	document.getElementById('react-container')

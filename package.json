@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "babel": "./node_modules/babel-cli/bin/babel.js ./src/app.js --out-file ./dist/bundle.js",
-    "start": "./node_modules/httpster/bin/httpster -d ./dist -p 3000",
+    "start": "./node_modules/.bin/webpack-dev-server --open",
+    "watch": "./node_modules/.bin/webpack --progress --watch",
+    "babel": "./node_modules/.bin/babel ./src/app.js --out-file ./dist/bundle.js",
+    "oldStart": "./node_modules/.bin/httpster -d ./dist -p 3000",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,9 +23,14 @@
   "homepage": "https://github.com/Broadstrokes/teachReactWorkshop#readme",
   "devDependencies": {
     "babel-cli": "^6.18.0",
-    "babel-preset-latest": "^6.16.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-latest": "^6.24.1",
     "babel-preset-react": "^6.16.0",
     "babel-preset-stage-0": "^6.16.0",
-    "httpster": "^1.0.3"
+    "httpster": "^1.0.3",
+    "webpack": "^4.10.2",
+    "webpack-cli": "^3.0.1",
+    "webpack-dev-server": "^3.1.4"
   }
 }
