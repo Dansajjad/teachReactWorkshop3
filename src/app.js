@@ -4,10 +4,11 @@
 	I am using as part of the packages
  */
 
-const { render } = ReactDOM
+const React  = require('react')
+const { render } = require('react-dom')
 
 render(
-	<h1 
+	<h1
 		id='greeting'
 		className='header'
 		style={
