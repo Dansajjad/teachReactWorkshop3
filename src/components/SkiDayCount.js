@@ -1,15 +1,16 @@
 import React from 'react'
+import { Component } from 'react'
 import '../stylesheets/ui.scss'
 
-const SkiDayCount = React.createClass({
+class SkiDayCount extends Component {
 	
 	percentToDecimal(decimal) {
 		return decimal * 100 + '%'
-	},
+	}
 
 	calcGoalProgress(total, goal) {
 		return this.percentToDecimal(total/goal) 
-	},
+	}
 
 	render() {
 		return (
@@ -21,6 +22,6 @@ const SkiDayCount = React.createClass({
 			</div>
 		)
 	}
-})
+}
 
 export default SkiDayCount
