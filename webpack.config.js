@@ -89,6 +89,14 @@ module.exports = {
         test: /\.json$/,
         exclude: /(node_modules)/,
         loader: 'json-loader'
+      },
+      {
+        test: /\.css$/,
+        loader: 'style-loader!css-loader!autoprefixer-loader'  // <-- these have to be inorder 
+      },
+      {
+        test: /\.scss$/,
+        loader: 'style-loader!css-loader!autoprefixer-loader!sass-loader'
       }
     ]
   }
